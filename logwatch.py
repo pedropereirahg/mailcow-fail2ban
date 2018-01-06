@@ -18,7 +18,7 @@ if re.search(yes_regex, os.getenv('SKIP_FAIL2BAN', 0)):
   time.sleep(31536000)
   raise SystemExit
 
-r = redis.StrictRedis(host='172.22.1.249', decode_responses=True, port=6379, db=0)
+r = redis.StrictRedis(host='redis', decode_responses=True, port=6379, db=0)
 pubsub = r.pubsub()
 
 RULES = {}
